@@ -1,0 +1,377 @@
+:root {
+    --light-green: #d5f4e6;
+    --cyan: #80ced6;
+    --light-yellow: #fefbd8;
+    --dark-cyan: #618685;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Inria Sans", sans-serif;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+/*header*/
+header{
+    position: fixed;
+    z-index: 2000;
+    left:0;
+    top: 0;
+    width: 100%;
+    background-color: white;
+}
+
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link:hover {
+    color: var(--cyan);
+}
+.dropdown-item:active {
+    background-color: #3ad5e5;
+}
+.form-control {
+    background: none;
+    border: none;
+    border-bottom: 1px solid var(--cyan);
+    border-radius: 0;
+}
+
+.form-control:focus {
+    border: none;
+    box-shadow: none;
+    background: none;
+    caret-color: var(--cyan);
+    border-bottom: 1px solid var(--cyan);
+}
+
+.form-control:focus::placeholder {
+    visibility: hidden;
+}
+
+nav button.btn {
+    border: 1px solid var(--cyan);
+    color: var(--cyan);
+    transition: .3s;
+}
+
+nav button.btn:hover {
+    border: 1px solid var(--cyan);
+    color: white;
+    background-color: var(--cyan);
+}
+
+/*end of header*/
+
+/*intro*/
+.intro .imge{
+    position: relative;
+
+}
+.intro .imge::after {
+    content: "";
+    position: absolute;
+    background-color: #212529e0;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.intro .text {
+    width: 600px;
+    position: absolute;
+    z-index: 10;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.intro .text p{
+    color: white;
+}
+@media (max-width:767px) {
+    .intro .text {
+        width: 350px;
+        top: 65%;
+    }
+    .intro .text p,
+    .intro .text h1{
+  font-size: 10px;
+    
+}
+}
+/*end of intro*/
+
+/*services*/
+.services .special-header::before,
+.reviews .special-header::before {
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    bottom: 25px;
+    background-color: var(--cyan);
+    left: -30px;
+}
+
+.services:hover .special-header::before,
+.reviews:hover .special-header::before {
+    animation: move 1s linear forwards;
+}
+
+.services:hover .special-header,
+.reviews:hover .special-header {
+    color: white;
+    transition-duration: .7s;
+}
+
+@keyframes move {
+    50% {
+        left: 50%;
+        border-radius: 0;
+    }
+
+    100% {
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: -1;
+        color: white;
+    }
+
+}
+
+.services .content {
+    border: 1px solid var(--cyan);
+    padding: 30px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.services .content:hover{
+    background-color: var(--cyan);
+    color: white;
+    transition: .4s;
+}
+.services .content:hover i{
+    color: white;
+}
+.services .content i {
+   font-size: 20px;
+    color: #3ad5e5;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+/*end of services*/
+
+
+/*books cat*/
+.special-header {
+    color: rgb(0 0 0 / 65%);
+    text-align: center;
+    width: fit-content;
+    margin: 0 auto;
+    padding: 10px;
+    position: relative;
+    border: 1px solid var(--cyan);
+}
+
+.books-cat .special-header::before,
+.ratings .special-header::before {
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    bottom: 25px;
+    background-color: var(--cyan);
+    right: -30px;
+}
+
+.books-cat:hover .special-header::before,
+.ratings:hover .special-header::before {
+    animation: move 1s linear forwards;
+}
+
+.books-cat:hover .special-header,
+.ratings:hover .special-header {
+    color: white;
+    transition-duration: .7s;
+}
+
+@keyframes move {
+    50% {
+        left: 50%;
+        border-radius: 0;
+    }
+
+    100% {
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: -1;
+        color: white;
+    }
+
+}
+
+.books-cat .card h5 {
+    color: #3ad5e5;
+}
+
+.books-cat .heart {
+    color: rgb(182, 178, 178);
+}
+
+.books-cat .heart:hover,
+.books-cat .heart:focus {
+    color: red;
+}
+
+.books-cat a.btn {
+    position: relative;
+    background-color: #3ad5e5;
+    border: none;
+}
+
+.books-cat .btn:hover {
+    background-color: #60e8f7;
+}
+
+.books-cat a.btn::after {
+    content: "\f07a";
+    font-family: "fontawesome";
+    position: absolute;
+    right: 50px;
+}
+
+.books-cat a.btn:hover::after {
+    transform: translateX(20px);
+    transition: 2s;
+}
+
+/*end of books cat*/
+
+/* reviews*/
+.reviews .content{
+    position: relative;
+    text-align: center;
+    padding: 30px;
+    margin-bottom: 10px;
+}
+.reviews p{
+    border-top:1px solid var(--cyan);
+    padding-top: 30px;
+}
+.reviews .imge{
+    position: absolute;
+    top: 2px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.reviews .imge img{
+    border-radius: 50%;
+    width: 50px;
+}
+.reviews i:not(.empty){
+    color: rgb(255, 255, 11);
+}
+.reviews i.empty{
+    color: #ccc;
+}
+/*end of reviews*/
+
+/*quote*/
+.quote{
+    background-color: var(--light-yellow);
+}
+.quote q{
+    display: block;
+    width: 400px;
+    margin: 0 auto;
+}
+@media (max-width:767px) {
+    .quote q {
+        width: 357px;
+    }
+}
+/*end of quote*/
+
+/*footer*/
+footer{
+    /* background-color: var(--light-green); */
+    background-color: var(--light-green);
+}
+footer li:hover i{
+    color:#3ad5e5;
+    transition: .6s;
+}
+footer li:hover i{
+ transform: scale(1.2);
+
+}
+footer ul.about-us-list li a{
+    color: rgb(33 37 41);
+    transition: .4s;
+}
+footer ul.about-us-list li a:hover{
+    color:#3ad5e5;
+}
+footer button.btn {
+    border: 1px solid var(--cyan);
+    color: var(--cyan);
+    transition: .3s;
+}
+
+footer button.btn:hover {
+    border: 1px solid var(--cyan);
+    color: white;
+    background-color: var(--cyan);
+}
+footer a{
+    text-decoration: none;
+}
+ .special-span{
+    color: #3ad5e5;
+}
+/*end of footer*/
+
+
+/*public classes*/
+.card {
+    margin-bottom: 20px;
+    width: 100%;
+    border: none;
+    box-shadow: 0 4px 8px rgb(0 0 0 / 20%);
+}
+.card img {
+    width: 100%;
+    object-fit: cover;
+    transition: .4s;
+}
+h1 {
+    color: var(--cyan);
+}
+.padding100 {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+.padding50{
+    padding: 50px;
+}
+/*end of public classes*/
