@@ -296,6 +296,30 @@ nav button.btn:hover {
 }
 /*end of reviews*/
 
+/*ratings*/
+.ratings .progress{
+    position: relative;
+}
+.ratings .progress-bar{
+    position: absolute;
+    width:  0;
+    transition: .8s;
+    height: 100%;
+}
+.ratings:hover .progress-bar.red-bar{
+    width: 100%;
+}
+.ratings:hover .progress-bar.yellow-bar{
+    width: 75%;
+}
+.ratings:hover .progress-bar.blue-bar{
+    width: 50%;
+}
+.ratings:hover .progress-bar.green-bar{
+    width: 25%;
+}
+/*end of ratings*/
+
 /*quote*/
 .quote{
     background-color: var(--light-yellow);
