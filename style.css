@@ -31,12 +31,7 @@ header{
     width: 100%;
     background-color: white;
 }
-@media (max-width:767px) {
-    .carousel-control-prev, 
-    .carousel-control-next{
-        display: none;
-    }   
-}
+
 .navbar-nav .nav-link.active,
 .navbar-nav .nav-link:hover {
     color: var(--cyan);
