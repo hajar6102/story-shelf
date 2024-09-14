@@ -297,10 +297,10 @@ nav button.btn:hover {
 /*end of reviews*/
 
 /*ratings*/
-.ratings .progress{
+ .progress{
     position: relative;
 }
-.ratings .progress-bar{
+ .progress-bar{
     position: absolute;
     width: 0;
     transition: .8s;
