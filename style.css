@@ -31,7 +31,12 @@ header{
     width: 100%;
     background-color: white;
 }
-
+@media (max-width:767px) {
+    .carousel-control-prev, 
+    .carousel-control-next{
+        display: none;
+    }   
+}
 .navbar-nav .nav-link.active,
 .navbar-nav .nav-link:hover {
     color: var(--cyan);
@@ -368,6 +373,12 @@ footer button.btn:hover {
 }
 footer a{
     text-decoration: none;
+}
+@media (max-width:767px) {
+    footer p{
+    font-size: small;
+    margin-top: 10px;
+    }
 }
  .special-span{
     color: #3ad5e5;
