@@ -337,6 +337,9 @@ footer{
     /* background-color: var(--light-green); */
     background-color: var(--light-green);
 }
+footer  li {
+    margin-right: 10px;
+}
 footer li:hover i{
     color:#3ad5e5;
     transition: .6s;
