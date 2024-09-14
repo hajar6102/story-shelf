@@ -302,7 +302,7 @@ nav button.btn:hover {
 }
 .ratings .progress-bar{
     position: absolute;
-    width:  0;
+    width: 0;
     transition: .8s;
     height: 100%;
 }
