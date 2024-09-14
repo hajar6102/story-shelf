@@ -73,6 +73,11 @@ nav button.btn:hover {
 /*end of header*/
 
 /*intro*/
+@media (max-width:767px) {
+    .carousel-control-prev, .carousel-control-next {
+        top: 23%;
+    }
+}
 .intro .imge{
     position: relative;
 
